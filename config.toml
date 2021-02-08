@@ -1,0 +1,4 @@
+baseURL = "https://chynkm.github.io/"
+languageCode = "en-us"
+title = "KM"
+theme = "hugo-theme-console"
