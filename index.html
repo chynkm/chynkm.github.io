@@ -34,11 +34,14 @@
             <footer class="pt-4 my-md-5 pt-md-5 border-top">
                 <div class="row">
                     <div class="col-12 col-md">
-                        <small class="d-block mb-3 text-body-secondary">&copy; 2017–2023</small>
+                        <small class="d-block mb-3 text-body-secondary">&copy; 2011 – <span id="year"></span></small>
                     </div>
                 </div>
             </footer>
         </div>
         <script src="assets/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript">
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
     </body>
 </html>
