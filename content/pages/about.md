@@ -2,7 +2,7 @@
 title: About
 ---
 
-My name is KM. A short introduction about myself: 
+My name is KM. 
 - I am skilled primarily in Python, PHP(Laravel, Slim), Web(VanillaJS, Vue.JS), relational databases(MySQL/MariaDB, PostgreSQL), NoSQL(Elasticsearch/OpenSearch, Redis, MongoDB), containers(Docker, Podman) and IaC frameworks(Terraform, Packer). I am also experienced in all things AWS and am an associate level certified solutions architect. 
 - I have worked as a backend and infrastructure/platform engineer both on simple as well as large complex apps. I bring unique perspectives in building software. I am happy contributing to all the above, or focusing on just one.
 - I also know enough Bash, Ruby and Go to navigate large codebases, but I do not consider myself an expert in these. I am aware of Kubernetes, AWS Serverless too.
