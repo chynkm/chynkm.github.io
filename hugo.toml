@@ -53,3 +53,11 @@ paginate = 10
   baseName = "feed"
 
 ignoreErrors = ["error-remote-getjson"]
+
+[[module.mounts]]
+source = 'static'
+target = 'static'
+
+[[module.mounts]]
+source = 'images'
+target = 'static/images'
