@@ -1,7 +1,7 @@
 ---
 author: "Karthik M"
 title: "MySQL DB backup using Bash script"
-date: "2019-01-05"
+date: "2018-01-05"
 tags:
 - linux
 - bash

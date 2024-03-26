@@ -70,7 +70,7 @@ The act of forcing your browser (CDN, ISP, networking equipment, server) to load
 
 Below you can find the extract of a PHP code used to achieve the same in CodeIgniter framework. The logic can be used across all frameworks/languages.
 
-`common_helper.php`
+File: `common_helper.php`
 ```
 function asset_url($filename = '')
 {
@@ -85,7 +85,7 @@ function asset_url($filename = '')
 }
 ```
 
-`Asset.php`
+File: `Asset.php`
 ```
 <?php
 class Asset {
