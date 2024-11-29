@@ -9,6 +9,11 @@ paginate = 10
 
 [menu]
   [[menu.main]]
+    identifier = "resume"
+    name = "Resume"
+    url = "/docs/km-resume.pdf"
+    weight = "-100"
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
