@@ -21,3 +21,13 @@ Here’s what the challenge asked:
     - `name`
     - `height`
     - `sprite_url` (which should come from `sprites.front_default`)
+
+## Initial Approach: The Quick and Simple Method
+
+The first solution is straightforward — though not the most efficient. It involves querying the main Pokémon API endpoint to fetch a list of Pokémon. Then, for each Pokémon in that list, we make an additional request to retrieve its detailed data.
+
+From there, we filter the results based on the given conditions. Finally, we return only the Pokémon that meet these criteria.  
+
+While this method works, it's worth noting its a slow and inefficient process as we are working with a large dataset. The programs execution time averages around 170 seconds on my machine.
+
+<script src="https://gist.github.com/chynkm/2447dcb318e40561aad09293b8078547.js"></script>
