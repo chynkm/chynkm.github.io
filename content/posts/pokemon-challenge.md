@@ -65,7 +65,7 @@ Here's why this structure shines:
 - Resilient: Gracefully handles large datasets without overwhelming the network or system.
 - Organized: The code is modular and easier to extend (e.g., add retry logic, logging, or error handling per task).
 
-This solution combines the best of both worlds, the speed of `aiohttp` with the reliability of structured task management. The programs execution time averages around 29 seconds on my machine.
+This solution combines the best of both worlds, the speed of `aiohttp` with the reliability of structured task management. The programs execution time averages around 29 seconds on my machine(achieves a 6x speed improvement over the initial approach).
 
 <script src="https://gist.github.com/chynkm/25be57285494836b62d8ebf4647148df.js"></script>
 
