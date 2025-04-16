@@ -13,6 +13,7 @@ tags:
 Recently, I encountered an interesting Python coding challenge during an interview. The task involved working with the [PokéAPI](https://pokeapi.co/) — a free and open RESTful API for Pokémon data.
 
 Here’s what the challenge asked:
+
 1. Query the endpoint: https://pokeapi.co/api/v2/pokemon
 2. From the results, extract and print a list of Pokémon that satisfy both of the following conditions:
     - Their `base_experience` is greater than `200`.
@@ -43,3 +44,25 @@ By leveraging Python’s `asyncio` along with the `aiohttp` library, we can send
 This approach is ideal for I/O-bound tasks like querying external APIs — and it turns a slow, sequential loop into an efficient, coroutine-powered fetch operation. The programs execution time averages around 152 seconds on my machine.
 
 <script src="https://gist.github.com/chynkm/87fd9736daa4f9f83ffda7f7a54e0a03.js"></script>
+
+
+## Optimized and Scalable: Structured Concurrency with `asyncio.Queue`
+
+While firing off all requests in parallel can work for small datasets, it quickly becomes a bottleneck when working with hundreds of items, especially when dealing with API rate limits or system memory constraints.
+
+To overcome this, we can adopt a producer-consumer pattern using `asyncio.Queue`. This method lets us strike a perfect balance between concurrency and control:
+
+- A producer coroutine fetches the initial list of Pokémon and pushes individual detail URLs into a queue.
+- Multiple consumer coroutines then pick items from the queue and process them concurrently, but in a controlled manner, defined by the number of workers.
+
+By limiting the number of simultaneous API calls, this approach avoids common pitfalls like connection timeouts, rate limiting, and memory spikes, while still being highly performant due to asynchronous I/O.
+
+Here's why this structure shines:
+
+- Scalable: Easily control concurrency by tweaking the number of consumers(`NUM_CONSUMERS`).
+- Resilient: Gracefully handles large datasets without overwhelming the network or system.
+- Organized: The code is modular and easier to extend (e.g., add retry logic, logging, or error handling per task).
+
+This solution combines the best of both worlds, the speed of `aiohttp` with the reliability of structured task management. The programs execution time averages around 29 seconds on my machine.
+
+<script src="https://gist.github.com/chynkm/25be57285494836b62d8ebf4647148df.js"></script>
