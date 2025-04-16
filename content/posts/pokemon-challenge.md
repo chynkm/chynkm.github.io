@@ -28,7 +28,7 @@ Here's what the challenge asked:
 
 ## Initial Approach: The Quick and Simple Method
 
-The first solution is straightforward — though not the most efficient. It involves querying the main Pokémon API endpoint to fetch a list of Pokémon. Then, for each Pokémon in that list, we make an additional request to retrieve its detailed data.
+The first solution is straightforward, though not the most efficient. It involves querying the main Pokémon API endpoint to fetch a list of Pokémon. Then, for each Pokémon in that list, we make an additional request to retrieve its detailed data.
 
 From there, we filter the results based on the given conditions. Finally, we return only the Pokémon that meet these criteria.  
 
