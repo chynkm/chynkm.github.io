@@ -26,6 +26,21 @@ Here's what the challenge asked:
     - `sprite_url` (which should come from `sprites.front_default`)
 
 
+## Prerequisites: requirements.txt File
+
+I have used Python version 3.12.2
+
+<script src="https://gist.github.com/chynkm/65c992524d3c755715654958fe7accfd.js"></script>
+
+All the required Python dependencies for running the following scripts are listed in the `requirements.txt` file. To set up your environment with these modules, simply run the following command after creating your [virtual environment](https://docs.python.org/3/library/venv.html):
+
+```
+pip3 install -r requirements.txt
+```
+
+This will ensure that all the necessary libraries are installed before you execute the script.
+
+
 ## Initial Approach: The Quick and Simple Method
 
 The first solution is straightforward, though not the most efficient. It involves querying the main Pokémon API endpoint to fetch a list of Pokémon. Then, for each Pokémon in that list, we make an additional request to retrieve its detailed data.
@@ -82,16 +97,3 @@ I'll leave this as an exercise for curious readers who are interested in a setup
 Using `asyncio` and `aiohttp` with thoughtful concurrency patterns like queues can significantly improve performance and scalability when working with external APIs. Whether you're dealing with a small dataset or a paginated API, understanding when and how to parallelize is key to writing efficient and elegant asynchronous code.
 
 Happy coding and may your Pokémon always be fire-type with a high base experience!
-
-
-## requirements.txt File
-
-<script src="https://gist.github.com/chynkm/65c992524d3c755715654958fe7accfd.js"></script>
-
-All the required Python dependencies for running the script are listed in the `requirements.txt` file. To set up your environment with these modules, simply run the following command:
-
-```
-pip3 install -r requirements.txt
-```
-
-This will ensure that all the necessary libraries are installed before you execute the script.
