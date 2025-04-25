@@ -26,9 +26,9 @@ Here's what the challenge asked:
     - `sprite_url` (which should come from `sprites.front_default`)
 
 
-## Prerequisites: requirements.txt File
+## Prerequisites: `requirements.txt` File
 
-I have used Python version 3.12.2
+I have used Python version `3.12.2`.
 
 <script src="https://gist.github.com/chynkm/65c992524d3c755715654958fe7accfd.js"></script>
 
