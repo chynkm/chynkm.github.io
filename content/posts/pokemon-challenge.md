@@ -87,3 +87,11 @@ Happy coding and may your Pokémon always be fire-type with a high base experien
 ## requirements.txt File
 
 <script src="https://gist.github.com/chynkm/65c992524d3c755715654958fe7accfd.js"></script>
+
+All the required Python dependencies for running the script are listed in the `requirements.txt` file. To set up your environment with these modules, simply run the following command:
+
+```
+pip3 install -r requirements.txt
+```
+
+This will ensure that all the necessary libraries are installed before you execute the script.
